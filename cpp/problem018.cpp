@@ -22,7 +22,7 @@ void run_a_case(int tc){
         dp[i][i]+=dp[i-1][i-1];
     }
     int ans=0;
-    for(int i=0;i<15;i++) ans=max(ans,dp[14][i]);
+    for(auto i:dp[14]) ans=max(ans,i);
     cout<<ans<<"\n";
     return;
 }
